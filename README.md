@@ -51,8 +51,8 @@ docker run --name phpmyadmin -d -e PMA_HOST=demo_1_mysql --network demo_1 -p 808
 
 ### creating DB
 * create db named `main`
-* create 2 tables:
-user (id (auto increment), date_insert (CURRENT_TIMESTAMP), date_update (CURRENT_TIMESTAMP), phone, password_hash), user_token (id (auto increment), date_insert (CURRENT_TIMESTAMP), date_update (CURRENT_TIMESTAMP), user_id, token, expires)
+* create 2 tables: <br>
+user (id (auto increment), date_insert (CURRENT_TIMESTAMP), date_update (CURRENT_TIMESTAMP), phone, password_hash), <br> user_token (id (auto increment), date_insert (CURRENT_TIMESTAMP), date_update (CURRENT_TIMESTAMP), user_id, token, expires)
 
 
 ### main container
@@ -61,3 +61,7 @@ you need to create in root folder file named `secrets.txt` and put password, tha
 chmod +x build.sh
 ./build.sh
 ```
+
+## done
+
+now, nginx running on `localhost:8080`. If not, try restarting nginx

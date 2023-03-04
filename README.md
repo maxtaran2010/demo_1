@@ -37,5 +37,6 @@ docker run --name demo_1_mysql --network demo_1 -e MYSQL_ROOT_PASSWORD=*password
 
 ### main container
 ```
-build.bat
+chmod +x build.sh
+./build.sh
 ```

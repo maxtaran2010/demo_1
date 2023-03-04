@@ -1,0 +1,43 @@
+
+auth
+---
+tags:
+  - Auth
+parameters:
+  - name: Auth
+    in: body
+    required: true
+    schema:
+      id: Auth
+      required:
+      - phone
+      - password
+      type: object
+      properties:
+        phone:
+          type: string
+          format: string
+          example: "+79999999999"
+        password:
+          type: string
+          example: admin123
+responses:
+  200:
+    description: Successful operation
+    content:
+      application/json:
+        schema:
+          required:
+          - phone
+          - password
+          type: object
+          properties:
+            success:
+              type: boolean
+              format: boolean
+              example: true
+            error:
+              type: string
+              example: ''
+            data:
+              example: ""

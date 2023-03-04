@@ -36,6 +36,7 @@ docker run --name demo_1_mysql --network demo_1 -e MYSQL_ROOT_PASSWORD=*password
 ```
 
 ### main container
+you need to create in root folder file named `secrets.txt` and put password, that you entered in last step
 ```
 chmod +x build.sh
 ./build.sh

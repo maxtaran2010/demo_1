@@ -11,7 +11,7 @@ docker network create -d bridge demo_1
 ### nginx
 
 ```
-docker run -d --name nginx_demo_1 --network demo_1 -it -v c:/Projects/School/demo_1/nginx:/etc/nginx -p 8080:80 nginx
+docker run -d --name nginx_demo_1 --network demo_1 -it -p 8080:80 nginx
 ```
 
 configure 

@@ -1,5 +1,11 @@
 # demo_1
 
+## create network
+
+```bash
+docker network create -d bridge demo_1
+```
+
 ## creating docker containers
 
 ### nginx

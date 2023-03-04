@@ -41,6 +41,20 @@ http {
 docker run --name demo_1_mysql --network demo_1 -e MYSQL_ROOT_PASSWORD=*password* -d mysql
 ```
 
+### phpmyadmin
+
+for simple DB manegment you can run phpmyadmin:
+
+```
+docker run --name phpmyadmin -d -e PMA_HOST=demo_1_mysql --network demo_1 -p 8080:80 phpmyadmin
+```
+
+### creating DB
+* create db named `main`
+* create 2 tables:
+user (id (auto increment), date_insert (CURRENT_TIMESTAMP), date_update (CURRENT_TIMESTAMP), phone, password_hash), user_token (id (auto increment), date_insert (CURRENT_TIMESTAMP), date_update (CURRENT_TIMESTAMP), user_id, token, expires)
+
+
 ### main container
 you need to create in root folder file named `secrets.txt` and put password, that you entered in last step
 ```

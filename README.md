@@ -32,7 +32,10 @@ http {
 
 ### mysql
 ```
-
+docker run --name demo_1_mysql --network demo_1 -e MYSQL_ROOT_PASSWORD=*password* -d mysql
 ```
 
+### main container
+```
+build.bat
 ```
